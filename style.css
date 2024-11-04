@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+    background-color: #202122;
+}
+
+.btn-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:50px;
+}
+
+.each-btn{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    grid-gap:20px;
+}
+
+.each-btn h1{
+    color: #b4b4b4;
+}
+
+.one button{
+    width:120px;
+    height:50px;
+    padding:10px;
+    overflow:hidden;
+    border-radius: 30px;
+    border:1px solid #47ffc8;
+    outline:none;
+    background-color:transparent;
+    color:white;
+}
+.each-btn *{
+    transition: all 0.5s;
+}
+.one button main{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    grid-gap:10px;
+    overflow: hidden;
+}
+
+.one main i:nth-child(1){
+    transform: translateX(-16px);
+}
+.one main span{
+    transform: translateX(-14px);
+    font-size:15px;
+}
+.one main i:nth-child(3){ 
+    transform: translateX(-10px);
+}
+.one button i{
+    font-size:17px;
+}
+.one button:hover{
+    background-color: #47ffc8;
+    border-radius:10px;
+    border:none;
+}
+.one button:hover main i:nth-child(1){
+    transform: translateX(13px);
+}
+.one button:hover main span{
+    transform: translateX(17px);
+}
+.one button:hover main i:nth-child(3){
+    transform: translateX(20px);
+}
+
+.two button{
+    width:120px;
+    height:50px;
+    border-radius:50px;
+    border: none;
+    outline: none;
+    background-color: #47ffc8;
+    color:white;
+    overflow: hidden;
+}
+
+.two button main{
+    display:flex;
+    flex-direction:column;
+    grid-gap:0;
+    position:relative;
+}
+.two button main div{
+    position:absolute;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    border-top:50px solid #3be0af;
+    left:50%;
+    transform: translate(-50%, 4em);
+    z-index: 0;
+}
+.two button main p{
+    position:relative;
+    z-index: 10;
+    font-size:15px;
+}
+
+.two button main p:nth-child(1){
+    transform: translateY(11px);
+}
+.two button main p:nth-child(2){
+    transform: translateY(0px);
+    opacity: 0;
+}
+.two button:hover main p:nth-child(1){
+    transform: translateY(0px);
+    opacity: 0;
+}
+.two button:hover main p:nth-child(2){
+    transform: translateY(-10px);
+    opacity: 1;
+}
+.two button:hover main div{
+    transform: translate(-50%, -5em);
+}
+
+.third button{
+    width: 120px;
+    height:50px;
+    position: relative;
+    background-color: #47ffc8;
+    border: none;
+    outline:none;
+    border-radius:50px;
+}
+
+.third button main{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    color: white;
+}
+.third button main i{
+    position:absolute;
+    font-size: 27px;
+    opacity: 0;
+}
+.third button:hover main i{
+    opacity: 1;
+}
+.third button main p{
+    font-size:15px;
+    transition: all 0.4s;
+}
+.third button:hover main p{
+    transform: translateX(5px);
+    opacity: 0;
+}
+.third button:hover{
+    width: 50px;
+}
+.third button > i{
+    display: none;
+    transition: all 2s;
+}
+.third button:hover > i{
+    display: block;
+    position:absolute;
+    font-size:70px;
+    color:white;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation:rotation 2s linear infinite;
+}
+@keyframes rotation {
+    to{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+} 
+
+.fourth button{
+    width:120px;
+    height:50px;
+    border-radius: 50px;
+    border: 1px solid #47ffc8;
+    outline:none; 
+    color: white;
+    background-color:transparent;
+    overflow:hidden;
+}
+.fourth button main{
+    position: relative;
+}
+.fourth button main p{
+    position:relative;
+    z-index:100;
+    font-size:15px;
+}
+.fourth button main div{
+    width:130px;
+    height:70px;
+    background-color: #3be0af;
+    position:absolute;
+    left:50%;
+    transform: translate(-50%,15px);
+    border-radius:50%;
+    color: #352012;
+}
+
+.fourth button:hover main div{
+    transform: translate(-50%,-45px);
+}
+
+.fifth button{
+    width:120px;
+    height:50px;
+    border-radius: 50px;
+    outline:none;
+    border:none; 
+    color: white;
+    background-color:transparent;
+    position: relative;
+    overflow:hidden;
+    background-image: url(diagonal-stripes.svg);
+    background-size:20%;
+}
+
+.fifth button.start{
+    animation: stripe-animation 1s linear infinite;
+}
+
+@keyframes stripe-animation {
+    to{
+        background-position:-50% 100%;
+    }
+}
+
+.fifth button main{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    grid-gap:10px;
+    position:relative;
+    z-index:100;
+}
+.fifth button main span{
+    width:30px;
+    height:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 50px;
+    background-color:white;
+    color: #352012;
+}
+
+.fifth button main p{
+    font-size:15px;
+}
+.fifth button.start main i{
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+.fifth button:hover main i{
+    transform:rotate(180deg)
+}
+.fifth button div{
+    position:absolute;
+    width:120px;
+    height:50px;
+    top:0;
+    left:0;
+    background-image: linear-gradient(180deg,transparent, #352012);
+}

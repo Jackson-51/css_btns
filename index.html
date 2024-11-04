@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css buttons</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="btn-container">
+        <div class="each-btn two">
+            <h1>1</h1>
+            <button>
+                <main>
+                    <p>Register</p>
+                    <p>Register</p>
+                    <div></div>
+                </main>
+            </button>
+        </div>
+
+        <!-- second button -->
+        <div class="each-btn one">
+            <h1>2</h1>
+            <button>
+                <main>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span>Explore</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </main>
+            </button>
+        </div>
+        <!-- third button -->
+        <div class="each-btn fifth">
+            <h1>3</h1>
+            <button onclick="trigger(this)">
+                <main>
+                    <span><i class="fa-solid fa-rotate"></i></span>
+                    <p>Reload</p>            
+                 </main>
+                 <div></div>  
+            </button>
+        </div>
+        <!-- fourth button -->
+        <div class="each-btn fourth">
+            <h1>4</h1>
+            <button>
+                <main>
+                    <p>Upload</p>         
+                    <div></div>     
+                 </main>
+            </button>
+        </div>
+        <!-- fifth button -->
+        <div class="each-btn third">
+            <h1>5</h1>
+            <button>
+                <main>
+                    <i class="ai-download"></i>
+                    <p>Download</p>              
+                 </main>
+                 <i class="fa-solid fa-spinner"></i>
+            </button>
+        </div>
+
+    </div>
+    <script>
+        function trigger(a) {  
+            a.classList.toggle("start");
+        }
+    </script>
+</body>
+</html>
+
